@@ -1,0 +1,24 @@
+spring:
+  datasource: #数据库配置
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lagou?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  cloud:
+    config:
+      name: lagou-service-user #配置文件名称
+      profile: dev  #配置文件环境后缀
+      label: master #分支
+      uri: http://localhost:9006 #配置中心地址
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+#暴露所有的通信端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
