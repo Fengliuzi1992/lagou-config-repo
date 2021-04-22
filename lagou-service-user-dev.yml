@@ -1,4 +1,4 @@
 #ip防爆刷配置：多少分钟内，请求限制多少
 brushStroke:
-  time: 1 #单位分钟
-  number: 10
+  time: 2 #单位分钟
+  number: 20
